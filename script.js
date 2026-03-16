@@ -25,7 +25,7 @@ const backBtn = document.getElementById('backBtn');
 async function loadTeamsData() {
     try {
         tg.showProgress();
-        const response = await fetch('teams.json');
+        const response = await fetch('dota_teams_dataset.json');
         if (!response.ok) throw new Error('Не удалось загрузить teams.json');
         teamsData = await response.json();
         console.log(`✅ Загружено ${teamsData.length} команд`);
