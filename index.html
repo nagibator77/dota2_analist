@@ -11,21 +11,27 @@
     <div class="container">
         <h1 class="title">Dota Predictor</h1>
         
-        <div class="teams-container">
-            <div class="team-section">
-                <h2 class="team-title team-dire">Team Dire</h2>
-                <input type="text" id="direInput" class="input-field" placeholder="Ввести...">
+        <!--  Выбор команды -->
+        <div id="step1" class="step active">
+            <div class="team-selector">
+                <input type="text" id="teamInput" class="input-field" placeholder="Введите название команды...">
+                <button id="findTeamBtn" class="action-button">Найти команду</button>
             </div>
-            
-            <div class="team-section">
-                <h2 class="team-title team-radiant">Team Radiant</h2>
-                <input type="text" id="radiantInput" class="input-field" placeholder="Ввести...">
-            </div>
+            <div id="teamError" class="error-message"></div>
         </div>
         
-        <button id="predictBtn" class="predict-button">Предсказать</button>
+        <!-- Ввод героев для игроков -->
+        <div id="step2" class="step">
+            <h2 class="team-name" id="selectedTeamName"></h2>
+            <div id="playersContainer" class="players-container"></div>
+            <button id="predictBtn" class="predict-button">Предсказать</button>
+        </div>
         
+        <!-- Результат -->
         <div id="result" class="result-container"></div>
+        
+        <!-- Кнопка "Назад" -->
+        <button id="backBtn" class="back-button">← Назад</button>
     </div>
     
     <script src="script.js"></script>
