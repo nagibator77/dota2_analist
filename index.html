@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dota Predictor</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Dota Predictor</h1>
+        
+        <div class="teams-container">
+            <div class="team-section">
+                <h2 class="team-title team-dire">Team Dire</h2>
+                <input type="text" id="direInput" class="input-field" placeholder="Ввести...">
+            </div>
+            
+            <div class="team-section">
+                <h2 class="team-title team-radiant">Team Radiant</h2>
+                <input type="text" id="radiantInput" class="input-field" placeholder="Ввести...">
+            </div>
+        </div>
+        
+        <button id="predictBtn" class="predict-button">Предсказать</button>
+        
+        <div id="result" class="result-container"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
